@@ -3,7 +3,7 @@ import ROOT as r
 r.gStyle.SetOptStat(0)
 #r.gStyle.SetOptStat(11111)
 dir = "data/"
-dir = "../../results/"
+#dir = "../../results/"
 
 def make_list(hist):
     nums = [ hist.GetBinContent(1,1), hist.GetBinContent(1,2), hist.GetBinContent(1,3), hist.GetBinContent(1,4),
@@ -126,5 +126,5 @@ for mSquark in [400, 480, 560, 640, 720, 800, 880, 960, 1040, 1120, 1200, 1280, 
     for mGluino in [400, 480, 560, 640, 720, 800, 880, 960, 1040, 1120, 1200, 1280, 1360, 1440, 1520, 1600, 1680, 1760, 1840, 1920, 2000]:
         print "Extracting numbers for mSquark = "+str(mSquark)+"; mGluino = "+str(mGluino)+"."
         extract_numbers(f, mChi0, mSquark, mGluino, intlumi, intlumierror, obs_and_bkd_text)
-        input_data_list.append()
-f.write("inputData = [")
+        input_data_list.append("inputData_"+str(mChi0)+"_"+str(mSquark)+"_"+str(mGluino))
+f.write("inputData = ["+", ".join(id for id in input_data_list)+"]")
