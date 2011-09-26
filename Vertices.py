@@ -23,4 +23,4 @@ c.SaveAs("nVertices-Data.eps")
 reweight = hist_data.Clone()
 reweight.Divide(hist_mc)
 for bin in range(reweight.GetNbinsX()+2):
-  print str(bin)+": "+str(reweight.GetBinContent(bin))
+    print str(bin)+": "+str(reweight.GetBinContent(bin))

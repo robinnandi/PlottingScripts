@@ -2,6 +2,9 @@ from samples import *
 from histos import *
 from SweetPlots.plotter import DoPlotting
 
+dir = "data/"
+#dir = "../../results/"
+
 #samples = [QCD_Madgraph_Selected, GJets_Madgraph_Selected, Madgraph_Selected, Data]
 #out_folder = "plots/DataMC-Madgraph/" 
 #samples = [QCD_Pythia6_Selected, G_Pythia6_Selected, Pythia6_Selected, Data]
@@ -46,8 +49,8 @@ histograms = [
   Jet2Eta_1, Jet2Eta_2, Jet2Eta_3, Jet2Eta_all,
   Jet2EmFrac_1, Jet2EmFrac_2, Jet2EmFrac_3, Jet2EmFrac_all
 ]
-#files_folder = "../../results/Calo_ra3tight_"
-files_folder = "../../results/Calo_ra3tight_"
+#files_folder = dir+"Calo_ra3tight_"
+files_folder = dir+"Calo_ra3tight_"
 formats = [".png",".eps"]
 #intlumi = 1100.
 intlumi = -1
